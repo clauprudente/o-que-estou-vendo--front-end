@@ -21,7 +21,7 @@
             </div>
             <div>
                 <p class="small p-login">Login</p>
-                <form class="login">
+                <form class="login" method="POST">
                     <div class="email">
                         <img src="assets/img/email.png" />
                         <input type="email" placeholder="E-mail" class="email-login" />
@@ -57,17 +57,17 @@
         <div class="container content">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia cumque nobis aliquam quas, ab at inventore fugiat tempora? Nulla eveniet culpa minus eos vel ipsum, aliquid neque. Sunt, repellat maiores!
             </p>
-            <form class="cadastro" id="cadastro">
-                <label>E-mail: </label>
-                <input type="email" class="email-cadastro" />
-                <label>Senha: </label>
-                <input type="password" class="password-cadastro" />
-                <button class="btn-cadastro">Cadastrar</button>
+            <form class="cadastro" id="cadastro" method="POST">
+                <label for="email-cadastro">E-mail: </label>
+                <input type="email" id="email-cadastro" class="email-cadastro" placeholder="Digite aqui o seu e-mail" />
+                <label for="password-cadastro">Senha: </label>
+                <input type="password" id="password-cadastro" class="password-cadastro" placeholder="Digite aqui sua senha." />
+                <button class="btn-cadastro ">Cadastrar</button>
             </form>
         </div>
     </section>
     <footer>
-        <div class="container">
+        <div class="container ">
             <p>
                 Projeto realizado por Cláudia Maria Prudente dos Santos.
             </p>
@@ -76,7 +76,7 @@
             </p>
         </div>
     </footer>
-    <script src="assets/js/script-index.js"></script>
+    <script src="assets/js/script-index.js "></script>
 </body>
 
 </html>
