@@ -18,4 +18,18 @@ botaoCadastro.addEventListener('click', (e) => {
     const passwordCadastro = document.querySelector('.password-cadastro').value;
 
     console.log(emailCadastro, passwordCadastro);
+
+    const usuario = {
+        "email": emailCadastro,
+        "senha": passwordCadastro
+    }
+
+    fetch('http://localhost:3000/usuarios', {
+        method: 'POST',
+        body: JSON.stringify(usuario),
+        headers: {
+            'Content-Type': 'Application/json'
+        }
+    }).then(response => console.log("Criado! =)"));
+    window.location.reload()
 })
