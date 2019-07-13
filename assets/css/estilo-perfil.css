@@ -1,0 +1,171 @@
+body,
+p,
+h1,
+form,
+input,
+button {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #595757;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #703f4b;
+    padding: 10px 20px 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+header p {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer {
+    background-color: #703f4b;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.25);
+}
+
+footer p {
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form h1:after {
+    content: "";
+    width: 113px;
+    height: 2px;
+    display: block;
+    background-color: #703f4b;
+    position: relative;
+    left: 30px;
+}
+
+.container-form-catalogo {
+    padding: 147px 0px 33px 0px;
+    display: flex;
+}
+
+.container-form-catalogo form {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.container-form-catalogo input {
+    max-width: 300px;
+    margin: 0px 0px 20px 0px;
+    background-color: #703f4b;
+    border: none;
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    padding-left: 10px;
+    width: 300px;
+}
+
+.catalogo-geral {
+    display: flex;
+    flex-direction: column;
+    padding-left: 243px;
+}
+
+.catalogo-geral h1:after {
+    content: "";
+    width: 83px;
+    height: 2px;
+    display: block;
+    background-color: #703f4b;
+    position: relative;
+    left: 123px;
+}
+
+.catalogo {
+    display: flex;
+    padding-top: 35px;
+    width: 490px;
+    flex-wrap: wrap;
+}
+
+.catalogo-pai {
+    display: flex;
+    flex-direction: column;
+    padding-left: 36px;
+}
+
+.catalogo-pai-estrela {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    padding: 7px;
+}
+
+.catalogo-pai-img {
+    width: 110px;
+}
+
+.img-estrela {
+    max-width: 16px;
+}
+
+.catalogo p {
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 300;
+}
+
+.btn-cadastro-filme {
+    width: 150px;
+    padding: 10px 0px 10px 0px;
+    background-color: #703f4b;
+    border-radius: 5px;
+    border: none;
+    color: #fff
+}
+
+.btn-cadastro-filme:hover {
+    background-color: transparent;
+    border: 1px solid #703f4b;
+    cursor: pointer;
+    transition: 0.5s;
+    animation-timing-function: linear;
+    color: #703f4b;
+}

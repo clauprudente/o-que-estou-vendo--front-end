@@ -1,0 +1,229 @@
+body,
+p,
+h1,
+form,
+input,
+button {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #595757;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #703f4b;
+    padding: 10px 20px 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+header p {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    padding: 50px 0px 50px 0px;
+    padding-top: 150px;
+}
+
+.intro p {
+    line-height: 24px;
+    padding-right: 15px;
+}
+
+.intro h1 {
+    margin-bottom: 15px;
+}
+
+.intro h1:after {
+    content: "";
+    width: 110px;
+    height: 2px;
+    display: block;
+    background-color: #703f4b;
+}
+
+.img-intro {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.30);
+}
+
+.content {
+    padding: 50px 0px 50px 0px;
+}
+
+.content p {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.cadastro input {
+    width: 500px;
+}
+
+label {
+    padding: 0px 0px 0px 0px;
+}
+
+input {
+    max-width: 300px;
+    margin: 0px 0px 20px 0px;
+    background-color: #703f4b;
+    border: none;
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    padding-left: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.btn-cadastro {
+    width: 150px;
+    padding: 10px 0px 10px 0px;
+    background-color: #703f4b;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+
+.btn-cadastro:hover {
+    background-color: transparent;
+    border: 1px solid #703f4b;
+    cursor: pointer;
+    transition: 0.5s;
+    animation-timing-function: linear;
+    color: #703f4b;
+}
+
+footer {
+    background-color: #703f4b;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.25);
+}
+
+footer p {
+    color: #fff;
+}
+
+.email img,
+.password img {
+    width: 16px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 152px;
+}
+
+.login input {
+    background-color: #fff;
+    color: #595757;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 10px;
+}
+
+.login input,
+.btn-login {
+    margin-left: 5px;
+}
+
+.btn-login {
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    height: 24px;
+    margin-bottom: 19px;
+    width: 33px;
+    margin-left: 13px;
+}
+
+.btn-login:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: 0.5s;
+    animation-timing-function: linear;
+    cursor: pointer;
+}
+
+.small {
+    font-family: 'Montserrat Light', sans-serif;
+    text-transform: capitalize;
+    font-size: 10px;
+    font-weight: normal;
+    color: #fff;
+    text-decoration: none;
+}
+
+.p-login {
+    margin-left: 10px;
+    position: relative;
+    top: 4px;
+}
+
+.a-cadastro {
+    text-align: right;
+    position: relative;
+    left: 103px;
+    bottom: 5px;
+    color: #f1f1f1;
+}
+
+.a-cadastro:hover {
+    color: #fff;
+    transition: 0.5s;
+    animation-timing-function: linear;
+}
+
+.frase blockquote {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
