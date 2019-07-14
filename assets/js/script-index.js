@@ -16,21 +16,19 @@ botaoLogin.addEventListener('click', (e) => {
     console.log(JSON.stringify(usuario))
 
     fetch('http://localhost:3000/usuario/login', {
-        method: 'POST',
-        headers: {
-            'Access-Control-Allow-Origin': "*",
-            'Content-Type': 'Application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify(usuario),
-    }).then(response => {
-        console.log(response);
-        response.json();
-        console.log(response.json());
-    }).then(data => {
-        console.log(data);
-        console.log('Logado!!!! \o/')
-    });
+            method: 'POST',
+            headers: {
+                'Access-Control-Allow-Origin': "*",
+                'Content-Type': 'Application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(usuario),
+        }).then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log('Logado!!!! \o/');
+            setCookie('logado', data.token)
+        });
 
 })
 
@@ -58,3 +56,30 @@ botaoCadastro.addEventListener('click', (e) => {
     }).then(response => console.log(response));
     // window.location.reload()
 })
+
+const setCookie = (name, value, duration) => {
+    let cookie = name + "=" + escape(value) +
+        ((duration) ? "; duration=" + duration.toGMTString() : "");
+
+    document.cookie = cookie;
+}
+
+const getCookie = (name) => {
+    let cookies = document.cookie;
+    let prefix = name + "=";
+    let begin = cookies.indexOf("; " + prefix);
+
+    if (begin == -1) {
+        begin = cookies.indexOf(prefix);
+        if (begin != 0) {
+            return null;
+        }
+    } else {
+        begin += 2;
+    }
+    let end = cookies.indexOf(";", begin);
+    if (end == -1) {
+        end = cookies.length;
+    }
+    return unescape(cookies.substring(begin + prefix.length, end));
+}
