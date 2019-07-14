@@ -18,15 +18,18 @@ botaoLogin.addEventListener('click', (e) => {
     fetch('http://localhost:3000/usuario/login', {
         method: 'POST',
         headers: {
-            'Content-Type': 'Application/json'
+            'Access-Control-Allow-Origin': "*",
+            'Content-Type': 'Application/json',
+            'Accept': 'application/json'
         },
         body: JSON.stringify(usuario),
     }).then(response => {
         console.log(response);
         response.json();
+        console.log(response.json());
     }).then(data => {
         console.log(data);
-        console.log('Logado!!!! \o/' + token)
+        console.log('Logado!!!! \o/')
     });
 
 })
