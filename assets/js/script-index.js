@@ -48,13 +48,16 @@ botaoCadastro.addEventListener('click', (e) => {
     }
 
     fetch('https://o-que-estou-vendo-server.herokuapp.com/usuarios', {
-        method: 'POST',
-        body: JSON.stringify(usuario),
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'Application/json',
-            'Accept': 'application/json'
-        }
-    }).then(response => console.log(response));
-    window.location.reload()
+            method: 'POST',
+            body: JSON.stringify(usuario),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'Application/json',
+                'Accept': 'application/json'
+            }
+        }).then(response => response.json())
+        .then(data => {
+            console.log(data);
+            window.location.reload();
+        })
 })
