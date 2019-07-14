@@ -108,6 +108,7 @@ input {
     border-radius: 5px;
     padding: 10px 0px 10px 0px;
     padding-left: 10px;
+    padding-right: 28px;
 }
 
 input:focus {
@@ -148,7 +149,7 @@ footer p {
     width: 16px;
     position: absolute;
     margin-top: 10px;
-    margin-left: 152px;
+    margin-left: 184px;
 }
 
 .login input {

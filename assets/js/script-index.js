@@ -7,6 +7,28 @@ botaoLogin.addEventListener('click', (e) => {
     const passwordLogin = document.querySelector('.password-login').value;
 
     console.log(emailLogin, passwordLogin);
+
+    const usuario = {
+        "email": emailLogin,
+        "senha": passwordLogin
+    }
+
+    fetch('http://localhost:3000/usuario/login', {
+        method: 'POST',
+        body: JSON.stringify(usuario),
+        headers: {
+            'Content-Type': 'Application/json'
+        }
+    }).then(response => {
+        if (response.status == 200) {
+            // window.location.href = "file:///C:/Users/Claudia/Desktop/Claudia/o-que-estou-vendo--front-end/perfil.html";
+            console.log(response);
+        } else {
+            console.log('nops')
+        }
+
+    });
+
 })
 
 const botaoCadastro = document.querySelector('.btn-cadastro');
