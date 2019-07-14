@@ -27,7 +27,6 @@ botaoLogin.addEventListener('click', (e) => {
         .then(data => {
             console.log(data);
             console.log('Logado!!!! \o/');
-
             sessionStorage.setItem('logado', data.token);
         });
 
@@ -40,8 +39,6 @@ botaoCadastro.addEventListener('click', (e) => {
     console.log('Clicou no botão do cadastro =)');
     const emailCadastro = document.querySelector('.email-cadastro').value;
     const passwordCadastro = document.querySelector('.password-cadastro').value;
-
-    // console.log(emailCadastro, passwordCadastro);
 
     const usuario = {
         "email": emailCadastro,
