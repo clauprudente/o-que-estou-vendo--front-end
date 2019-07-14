@@ -27,6 +27,8 @@ botaoLogin.addEventListener('click', (e) => {
         .then(data => {
             console.log(data);
             console.log('Logado!!!! \o/');
+            window.location.href = 'perfil.html';
+
             sessionStorage.setItem('logado', data.token);
         });
 
