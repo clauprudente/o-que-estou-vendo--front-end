@@ -15,10 +15,10 @@ botaoLogin.addEventListener('click', (e) => {
 
     console.log(JSON.stringify(usuario))
 
-    fetch('http://localhost:3000/usuario/login', {
+    fetch('https://o-que-estou-vendo-server.herokuapp.com/usuario/login', {
             method: 'POST',
             headers: {
-                'Access-Control-Allow-Origin': "*",
+                'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'Application/json',
                 'Accept': 'application/json'
             },
@@ -47,11 +47,13 @@ botaoCadastro.addEventListener('click', (e) => {
         "senha": passwordCadastro
     }
 
-    fetch('http://localhost:3000/usuarios', {
+    fetch('https://o-que-estou-vendo-server.herokuapp.com/usuarios', {
         method: 'POST',
         body: JSON.stringify(usuario),
         headers: {
-            'Content-Type': 'Application/json'
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'Application/json',
+            'Accept': 'application/json'
         }
     }).then(response => console.log(response));
     window.location.reload()

@@ -1,5 +1,5 @@
 const container = document.querySelector('.catalogo')
-fetch('http://localhost:3000/usuario/filmes', {
+fetch('https://o-que-estou-vendo-server.herokuapp.com/usuario/filmes', {
         method: 'GET',
         headers: {
             'Content-Type': 'Application/json',
@@ -54,7 +54,7 @@ botaoCadastrar.addEventListener('click', (e) => {
         "estrelas": estrelasFilme
     }
 
-    fetch('http://localhost:3000/usuario/adicionar-filme', {
+    fetch('https://o-que-estou-vendo-server.herokuapp.com/usuario/adicionar-filme', {
             method: 'POST',
             headers: {
                 'Content-Type': 'Application/json',
