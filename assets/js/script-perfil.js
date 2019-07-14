@@ -40,3 +40,31 @@ fetch('http://localhost:3000/usuario/filmes', {
     })
 
 const botaoCadastrar = document.querySelector('.btn-cadastro-filme');
+
+botaoCadastrar.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('clicou no botao!!');
+    const nomeFilme = document.querySelector('.nome-filme').value;
+    const imagemFilme = document.querySelector('.imagem-filme').value;
+    const estrelasFilme = document.querySelector('.estrelas-filme').value;
+
+    const filme = {
+        "nome": nomeFilme,
+        "imagem": imagemFilme,
+        "estrelas": estrelasFilme
+    }
+
+    fetch('http://localhost:3000/usuario/adicionar-filme', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'Application/json',
+                'Authorization': `Bearer ${sessionStorage.getItem('logado')}`,
+                'Access-Control-Allow-Origin': "*",
+            },
+            body: JSON.stringify(filme)
+        }).then(response => response.json())
+        .then(data => {
+            console.log('Postado!!!!')
+            window.location.reload();
+        })
+})
