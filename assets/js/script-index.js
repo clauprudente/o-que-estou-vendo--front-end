@@ -13,20 +13,20 @@ botaoLogin.addEventListener('click', (e) => {
         "senha": passwordLogin
     }
 
+    console.log(JSON.stringify(usuario))
+
     fetch('http://localhost:3000/usuario/login', {
         method: 'POST',
-        body: JSON.stringify(usuario),
         headers: {
             'Content-Type': 'Application/json'
-        }
+        },
+        body: JSON.stringify(usuario),
     }).then(response => {
-        if (response.status == 200) {
-            // window.location.href = "file:///C:/Users/Claudia/Desktop/Claudia/o-que-estou-vendo--front-end/perfil.html";
-            console.log(response);
-        } else {
-            console.log('nops')
-        }
-
+        console.log(response);
+        response.json();
+    }).then(data => {
+        console.log(data);
+        console.log('Logado!!!! \o/' + token)
     });
 
 })
@@ -39,7 +39,7 @@ botaoCadastro.addEventListener('click', (e) => {
     const emailCadastro = document.querySelector('.email-cadastro').value;
     const passwordCadastro = document.querySelector('.password-cadastro').value;
 
-    console.log(emailCadastro, passwordCadastro);
+    // console.log(emailCadastro, passwordCadastro);
 
     const usuario = {
         "email": emailCadastro,
@@ -52,6 +52,6 @@ botaoCadastro.addEventListener('click', (e) => {
         headers: {
             'Content-Type': 'Application/json'
         }
-    }).then(response => console.log("Criado! =)"));
-    window.location.reload()
+    }).then(response => console.log(response));
+    // window.location.reload()
 })
