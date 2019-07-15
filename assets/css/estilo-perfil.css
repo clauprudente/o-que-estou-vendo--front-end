@@ -132,7 +132,6 @@ footer p {
     display: flex;
     flex-direction: column;
     padding-left: 36px;
-    flex: 1;
     flex-basis: 33%;
 }
 
