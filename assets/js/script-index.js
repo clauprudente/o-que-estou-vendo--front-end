@@ -30,7 +30,10 @@ botaoLogin.addEventListener('click', (e) => {
             window.location.href = 'perfil.html';
 
             sessionStorage.setItem('logado', data.token);
-        });
+        })
+        .catch(erro => {
+            console.log(erro)
+        })
 
 })
 
@@ -57,7 +60,8 @@ botaoCadastro.addEventListener('click', (e) => {
             }
         }).then(response => response.json())
         .then(data => {
-            console.log(data);
             window.location.reload();
+        }).catch(erro => {
+            console.log(erro)
         })
 })
