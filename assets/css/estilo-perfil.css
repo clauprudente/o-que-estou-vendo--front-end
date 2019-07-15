@@ -133,6 +133,7 @@ footer p {
     flex-direction: column;
     padding-left: 36px;
     flex-basis: 33%;
+    justify-content: space-between;
 }
 
 .catalogo-pai-estrela {
@@ -155,6 +156,7 @@ footer p {
     margin-bottom: 16px;
     padding-top: 31px;
     font-weight: 300;
+    font-size: 14px;
 }
 
 .btn-cadastro-filme {
