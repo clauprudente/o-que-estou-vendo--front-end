@@ -26,8 +26,12 @@ fetch('https://o-que-estou-vendo-server.herokuapp.com/usuario/filmes', {
             const estrela = document.createElement('div')
             estrela.setAttribute('class', 'catalogo-pai-estrela');
 
-            card.appendChild(titulo);
-            card.appendChild(imagem);
+            const texto = document.createElement('div');
+            texto.appendChild(titulo);
+            texto.appendChild(imagem)
+
+            // card.appendChild(titulo);
+            card.appendChild(texto);
             for (let i = 0; i < filme.estrelas; i++) {
                 const estrelaimg = document.createElement('img');
                 estrelaimg.setAttribute('class', 'img-estrela')
