@@ -30,7 +30,6 @@ fetch('https://o-que-estou-vendo-server.herokuapp.com/usuario/filmes', {
             texto.appendChild(titulo);
             texto.appendChild(imagem)
 
-            // card.appendChild(titulo);
             card.appendChild(texto);
             for (let i = 0; i < filme.estrelas; i++) {
                 const estrelaimg = document.createElement('img');
