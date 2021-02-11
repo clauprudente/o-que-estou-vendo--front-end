@@ -68,9 +68,7 @@ botaoCadastro.addEventListener('click', (e) => {
 
 let deferredPrompt;
 const addBtn = document.querySelector('.add-button');
-addBtn.style.display = 'none';
-
-console.log("Teste");
+console.log(addBtn);
 
 window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -85,6 +83,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
       addBtn.style.display = 'none';
       // Show the prompt
       deferredPrompt.prompt();
+      console.log("Teste")
       // Wait for the user to respond to the prompt
       deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
