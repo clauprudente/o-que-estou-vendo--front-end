@@ -239,3 +239,12 @@ footer p {
     flex-direction: row;
     justify-content: center;
 }
+
+.add-button {
+    width: 150px;
+    padding: 10px 0px 10px 0px;
+    background-color: #703f4b;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+  }
